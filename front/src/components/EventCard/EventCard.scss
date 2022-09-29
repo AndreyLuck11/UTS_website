@@ -1,0 +1,33 @@
+.event-card {
+  margin: 22px auto;
+  width: 1197px;
+  border: 2px solid royalblue;
+  border-radius: 25px;
+  box-shadow: 3px 4px 8px 1px rgb(87 78 78 / 57%);
+  transition: transform 0.2s;
+  padding: 10px;
+  font-size: 20px;
+    &__title {
+      font-size: 27px;
+      text-align: center;
+    }
+
+    &__d-p-wrapper {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    //&__date {
+    //  display: inline;
+    //}
+    //
+    //&__point {
+    //  display: inline;
+    //}
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 15px rgba(78, 93, 178, 0.84);
+}
