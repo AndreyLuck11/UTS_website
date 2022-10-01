@@ -19,16 +19,21 @@ class EventSerializer(serializers.ModelSerializer):
 
 class EventListSerializer(serializers.ModelSerializer):
     cat = CategorySerializer()
+    date_of_event_start = serializers.DateField(format="%d.%m.%Y")
+    date_of_event_end = serializers.DateField(format="%d.%m.%Y")
 
     class Meta:
         model = Event
-        fields = ("id", "title", "date_of_event_start", "image_url", "cat", "date_of_event_end", "location", "url")
+        fields = "__all__"
+        # fields = ("id", "title", "date_of_event_start", "image_url", "cat", "date_of_event_end", "location", "url")
 
 
 # cat = serializers.CharField(source='cat.name')
 
 class EventRetrieveSerializer(serializers.ModelSerializer):
     cat = CategorySerializer()
+    date_of_event_start = serializers.DateField(format="%d.%m.%Y")
+    date_of_event_end = serializers.DateField(format="%d.%m.%Y")
 
     class Meta:
         model = Event

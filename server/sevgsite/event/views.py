@@ -20,12 +20,18 @@ class EventListPagination(PageNumberPagination):
     max_page_size = 100
 
 
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
 class EventViewSet(mixins.CreateModelMixin,
                    mixins.UpdateModelMixin,
                    mixins.DestroyModelMixin,
                    GenericViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+
     # permission_classes = (IsAuthenticatedOrReadOnly,)
     # pagination_class = EventListPagination
 

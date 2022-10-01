@@ -25,6 +25,7 @@ from sevgsite import settings
 
 router = routers.SimpleRouter()
 router.register(r'event', EventViewSet)
+router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

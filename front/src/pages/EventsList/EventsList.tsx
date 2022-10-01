@@ -20,11 +20,6 @@ const EventsList = () => {
         fetchEvents();
     }, [])
 
-    // function renderItems() {
-    //     events?.map(item => {
-    //         return  <EventCard></EventCard>
-    //     })
-    // }
 
     return (
         <div className="event-list">
